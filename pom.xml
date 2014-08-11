@@ -1,0 +1,117 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>edu.psu.ist.chemxseer.chemxseertagger</groupId>
+  <artifactId>ChemxseerTagger</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>ChemxseerTagger</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  <build>
+  <plugins>
+   <!--    <plugin>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <configuration>
+        <source>1.6</source>
+        <target>1.6</target>
+        <excludes>
+		   <exclude>**/org/apache/**</exclude>
+		</excludes>
+		
+      </configuration>
+    </plugin> -->
+
+
+  <plugin>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>exec-maven-plugin</artifactId>
+    <version>1.2.1</version>
+    <configuration>
+        <executable>java</executable>
+    </configuration>
+</plugin>
+
+  <plugin>
+    <artifactId>maven-assembly-plugin</artifactId>
+    <executions>
+      <execution>
+        <phase>package</phase>
+        <goals>
+          <goal>attached</goal>
+        </goals>
+      </execution>
+    </executions>
+    <configuration>
+      <descriptorRefs>
+        <descriptorRef>jar-with-dependencies</descriptorRef>
+      </descriptorRefs>
+    </configuration>
+  </plugin>
+</plugins>
+
+
+</build>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.1</version>
+      <scope>test</scope>
+    </dependency>
+      <dependency>
+	  <groupId>cc.mallet</groupId>
+	  <artifactId>mallet</artifactId>
+	<version>2.0.7</version>
+   </dependency>
+	<dependency>
+	<groupId>log4j</groupId>
+	<artifactId>log4j</artifactId>
+	<version>1.2.17</version>
+	</dependency>
+		<dependency>
+	    <groupId>oscar4</groupId>
+	    <artifactId>oscar4</artifactId>
+	    <version>4.0</version>
+	    <!--  <scope>system</scope> 
+	    <systemPath>${basedir}/lib/oscar4-all-4.1.2-with-dependencies.jar</systemPath>	-->
+	</dependency>
+	<dependency>
+     <groupId>org.apache.opennlp</groupId>
+     <artifactId>opennlp-tools</artifactId>
+     <version>1.5.3</version>
+    </dependency>
+    <dependency>
+    <groupId>org.apache.lucene</groupId>
+    <artifactId>lucene-analyzers-common</artifactId>
+    <version>4.0.0</version>
+</dependency> 
+    <dependency>
+	    <groupId>dragontool</groupId>
+	    <artifactId>dragontool</artifactId>
+	    <version>1.0</version>
+	      <scope>system</scope> 
+	    <systemPath>${basedir}/lib/dragontool.jar</systemPath>	
+	</dependency>  
+	
+	    <dependency>
+	    <groupId>heptag</groupId>
+	    <artifactId>heptag</artifactId>
+	    <version>1.0</version>
+	      <scope>system</scope> 
+	    <systemPath>${basedir}/lib/heptag.jar</systemPath>	
+	</dependency>     
+	<dependency>
+	<groupId>commons-codec</groupId>
+	<artifactId>commons-codec</artifactId>
+	<version>1.8</version>
+</dependency>
+	   
+  </dependencies>
+  
+</project>
