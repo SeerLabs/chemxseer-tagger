@@ -4,7 +4,7 @@ ChemxSeer Tagger provides a chemcial entity extractor that identifies
 mentions of chemical formula and names in free text. 
 
 # Install
-## Binary
+### Binary
 - Download the distribution from [here](http://www.personal.psu.edu/mxk479/chemxseer/chemxseer-tagger-dist.tar.gz)
 - Extract the compressed file 
 ```bash
@@ -19,7 +19,7 @@ For each input file, an output file will be created that contains in each line t
 
 Remember that only text files can be processed now. If you would like to extract entities out of PDFs and other formats, please convert them to text files first using tools like [Apache Tika](http://tika.apache.org/)
 
-## From Source
+### From Source
 - check the code out
 - run: mvn install
 
