@@ -10,9 +10,9 @@ mentions of chemical formula and names in free text.
 ```bash
 tar xvf chemxseer-tagger-dist.tar.gz
 ```
-- To run the tagger on a plain text document or a folder containing multiple documents, use the *batchTag.sh* script:
+- To run the tagger on a plain text document or a folder containing multiple documents, use the **batchTag.sh** script:
 ```bash
-./bashTag.sh indir outdir
+./batchTag.sh indir outdir
 ```
 where indir is path to directory containing text files, and outdir is directory into which tagged files will be written
 For each input file, an output file will be created that contains in each line the entity extracted, it's beginning offset within the file, and its end offset. Values are tab separated in each line.
